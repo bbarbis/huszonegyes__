@@ -1,11 +1,12 @@
 # megoldas
-def pontszamitas():
-    ossz = 0
+def pontszamitas(lapok :):
+    lap = []
+    osszead = 0
     for i in range (len(lista)):
-        ossz += lista[i]
-            return ossz
+        osszead += lapok[i]
 
-def eredmeny(jatekos, gep):
+
+def eredmeny(jatekos_L, gep_L):
     if jatekos_P > 21:
         print("Játekos veszít")
     elif gep_P > 21:
