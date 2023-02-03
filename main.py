@@ -30,7 +30,10 @@ def jatekosVesztettTeszt():
         print("Teszt sikeres. :)")
     else:
         print("Teszt megbukott. :)")
-
+    # jatekosnak nagyobb a lapja mint a gépnek
+    if len(jatekosLista) > len(gepLista):
+        print("Játékosnak több lapja van.")
+    
 
 def tesztek():
     jatekosVesztettTeszt()
