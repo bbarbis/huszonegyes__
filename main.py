@@ -1,12 +1,11 @@
 # megoldas
 def pontszamitas(lapok):
-
     osszead = 0
     for i in range(len(lapok)):
         osszead += lapok[i]
         return osszead
 
-def eredmeny(jatekos_L, gep_L):
+def eredmeny(jatekos_L,gep_L):
     szoveg = ""
     jatekos = pontszamitas(jatekos_L)
     gep = pontszamitas(gep_L)
@@ -17,25 +16,44 @@ def eredmeny(jatekos_L, gep_L):
         szoveg = "Gép veszít"
 
 
-
 # esetek
 def jatekosVesztettTeszt():
-    jatekosLista = [6, 4, 8, 9]
-    gepLista = [6, 4, 11]
+    jatekosLista = [4, 6, 8]
+    gepLista = [6, 9]
+    kapottEredmeny = eredmeny(jatekosLista, gepLista)
+    vartEredmeny = "Jatekos vesztett"
+    if kapottEredmeny == vartEredmeny:
+        print("Játékos nyert")
+    else:
+        print("Játékos vesztett.")
+
+def jatekosVesztettTeszt_2():
+    jatekosLista = [3, 6, 8, 10]
+    gepLista = [6, 9]
 
     kapottEredmeny = eredmeny(jatekosLista, gepLista)
-    vartEredmeny = "Jatekos veszített"
-
+    vartEredmeny = "Jatekos vesztett"
     if kapottEredmeny == vartEredmeny:
-        print("Teszt sikeres. :)")
+        print("Játékos nyert")
     else:
-        print("Teszt megbukott. :)")
-    # jatekosnak nagyobb a lapja mint a gépnek
-    if len(jatekosLista) > len(gepLista):
-        print("Játékosnak több lapja van.")
-    
+        print("Játékos vesztett több lapja van. ")
+
+def jatekosVesztettTeszt_3():
+    jatekosLista = [3, 6, 8, 10]
+    gepLista = [6, 9]
+
+    kapottEredmeny = eredmeny(jatekosLista, gepLista)
+    vartEredmeny = "Jatekos vesztett"
+    if kapottEredmeny == vartEredmeny:
+        print("Játékos nyert")
+    else:
+        print("Játékos vesztett több lapja van. ")
+
+
 
 def tesztek():
     jatekosVesztettTeszt()
+    jatekosVesztettTeszt_2()
+    jatekosVesztettTeszt_3()
 
 tesztek()
